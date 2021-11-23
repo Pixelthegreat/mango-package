@@ -1,0 +1,12 @@
+#!/usr/bin/make -f
+%:
+	dh $@
+
+override_dh_auto_install:
+	cp -v mango debian/mango/usr/bin/
+
+override_dh_auto_clean:
+	echo lol
+
+override_dh_auto_test:
+	echo lol again

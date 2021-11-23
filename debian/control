@@ -1,0 +1,12 @@
+Source: mango
+Maintainer: Elliot Kohlmyer <tommyteam320@gmail.com>
+Section: misc
+Priority: optional
+Standards-Version: 3.9.2
+Build-Depends: debhelper (>= 9)
+
+Package: mango
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: a programming language written in C
+ a programming language written in C. The language is interpreted, and uses a bytecode system with compilable bytecode libraries and executables. The language is designed to be small and lightweight compared to other languages.
