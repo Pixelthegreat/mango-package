@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# get package name
+PACKAGE_NAME=$1
+
+if [ "$PACKAGE_NAME" == "" ]; then
+	echo $0: you must provide a package name.
+	exit 1
+fi
+
+# (try to) pack an archive
+echo $0: packing archive \'$PACKAGE_NAME.tar.gz\'...
+tar -czvf "$PACKAGE_NAME.tar.gz" $PACKAGE_NAME/
+
+# error
+if [ $? -ne 0 ]; then
+	echo $0: failed to pack archive \'$PACKAGE_NAME.tar.gz\'.
+	exit 1
+fi
+
+# finished
+echo $0: finished packing archive \'$PACKAGE_NAME.tar.gz\'.
