@@ -9,12 +9,14 @@ mv -v mango-* mango-${MANGO_VERSION}
 cd mango-${MANGO_VERSION}
 
 # compile project
+./configure.sh
 make
 
 cd ..
 
-# copy executable #
+# copy executable, and other files #
 cp -v mango-${MANGO_VERSION}/mango mango/bin/
+cp -v mango-${MANGO_VERSION}/LICENSE.txt mango/
 
 # add version number #
 cp -v mango/package.conf backup.conf
