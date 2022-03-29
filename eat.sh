@@ -15,7 +15,7 @@ make
 cd ..
 
 # copy executable, and other files #
-cp -v mango-${MANGO_VERSION}/mango mango/bin/
+cp -v mango-${MANGO_VERSION}/mango mango/usr/bin/
 cp -v mango-${MANGO_VERSION}/LICENSE.txt mango/
 
 # add version number #
